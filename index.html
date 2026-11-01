@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digitalad.bd | ডিজিটাল দাওয়াহ ও ইসলামিক প্রতিষ্ঠান অটোমেশন এজেন্সি</title>
+    <meta name="description" content="বাংলাদেশের ইসলামিক স্কলারদের পার্সোনাল ব্র্যান্ডিং (SEO, AEO, GEO), মাদ্রাসা হিসাব সফটওয়্যার, ড্রোন ভিডিওগ্রাফি ও ওয়েবসাইট ডেভেলপমেন্টের বিশ্বস্ত প্ল্যাটফর্ম।">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Hind Siliguri for Premium Bengali Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        bengali: ['"Hind Siliguri"', 'sans-serif'],
+                        english: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        emerald: {
+                            950: '#022c22',
+                            900: '#064e3b',
+                            800: '#065f46',
+                            700: '#047857',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+        
+        /* Subtle Islamic Geometric SVG Pattern Overlay */
+        .islamic-pattern {
+            background-color: #022c22;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23fbbf24' stroke-width='0.6' stroke-opacity='0.12'%3E%3Cpath d='M30 0l15 15-15 15-15-15zM0 30l15 15-15 15-15-15zM60 30l15 15-15 15-15-15zM30 60l15 15-15 15-15-15z'/%3E%3Ccircle cx='30' cy='30' r='10'/%3E%3Cpath d='M30 10L50 30 30 50 10 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fde68a 0%, #fbbf24 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(6, 78, 59, 0.12), 0 8px 10px -6px rgba(6, 78, 59, 0.08);
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 3s infinite ease-in-out;
+        }
+
+        /* ==========================================================
+           n8n-Style Animated Neon Green Traveling Border Light
+           ========================================================== */
+        .n8n-neon-card {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            border-radius: 1.25rem; /* 20px */
+            padding: 2.5px; /* Border thickness where the neon beam travels */
+            background: rgba(16, 185, 129, 0.14); /* Subtle base track */
+            box-shadow: 0 10px 25px -5px rgba(2, 44, 34, 0.06), 0 0 15px rgba(0, 255, 102, 0.08);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+        }
+
+        /* Rotating Neon Green Laser Beam */
+        .n8n-neon-card::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 250%;
+            height: 250%;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0deg,
+                transparent 250deg,
+                #059669 285deg,
+                #10b981 315deg,
+                #00ff66 345deg,
+                #a7f3d0 356deg,
+                transparent 360deg
+            );
+            transform: translate(-50%, -50%);
+            animation: n8n-border-spin 4s linear infinite;
+            z-index: -2;
+        }
+
+        /* Second Opposite Beam for Longer Cards (Services & Packages) */
+        .n8n-neon-card-dual::before {
+            background: conic-gradient(
+                from 0deg,
+                transparent 0deg,
+                transparent 110deg,
+                #10b981 145deg,
+                #00ff66 172deg,
+                #a7f3d0 178deg,
+                transparent 180deg,
+                transparent 290deg,
+                #10b981 325deg,
+                #00ff66 352deg,
+                #a7f3d0 358deg,
+                transparent 360deg
+            );
+            animation: n8n-border-spin 5s linear infinite;
+        }
+
+        /* Staggered animation delays so cards feel like live n8n nodes */
+        .neon-delay-1::before { animation-delay: -1s; }
+        .neon-delay-2::before { animation-delay: -2.2s; }
+        .neon-delay-3::before { animation-delay: -3.1s; }
+
+        /* Inner Card Surface */
+        .n8n-card-inner {
+            border-radius: calc(1.25rem - 2.5px);
+            height: 100%;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Hover Intensification (n8n Node Active State) */
+        .n8n-neon-card:hover {
+            transform: translateY(-6px);
+            background: rgba(0, 255, 102, 0.32);
+            box-shadow: 0 20px 30px -10px rgba(6, 78, 59, 0.18), 0 0 25px rgba(0, 255, 102, 0.45);
+        }
+        .n8n-neon-card:hover::before {
+            animation-duration: 2.2s;
+        }
+
+        /* Pulsing n8n Node Status Dot */
+        .n8n-node-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 9999px;
+            background-color: #00ff66;
+            box-shadow: 0 0 10px #00ff66, 0 0 20px #00ff66;
+            display: inline-block;
+        }
+
+        @keyframes n8n-border-spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-emerald-900 selection:text-gold-400">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-emerald-950 text-emerald-100 text-xs sm:text-sm py-2 px-4 border-b border-emerald-800/60">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-gold-400 animate-ping"></span>
+                <span>১০০% শরীয়াহ-সম্মত ডিজিটাল দাওয়াহ ও মাদ্রাসা অটোমেশন সলিউশন</span>
+            </div>
+            <div class="flex items-center gap-4 font-english text-xs">
+                <a href="tel:+8801834399859" class="hover:text-gold-400 transition flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-gold-400"></i> 01834-399859
+                </a>
+                <span class="hidden sm:inline text-emerald-700">|</span>
+                <a href="mailto:digitaladbymonir@gmail.com" class="hidden sm:flex hover:text-gold-400 transition items-center gap-1">
+                    <i class="fa-solid fa-envelope text-gold-400"></i> digitaladbymonir@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-emerald-950/95 backdrop-blur-md border-b border-emerald-800/80 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Custom SVG Brand Logo (Mosque Dome + Digital Circuit) -->
+                <a href="#home" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-900 to-emerald-950 border border-gold-500/40 flex items-center justify-center shadow-md group-hover:border-gold-400 transition">
+                        <svg class="w-9 h-9" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Dome Outer Arch -->
+                            <path d="M32 6C32 6 12 20 12 38C12 49.0457 20.9543 58 32 58C43.0457 58 52 49.0457 52 38C52 20 32 6 32 6Z" stroke="url(#goldGrad)" stroke-width="3.5" fill="#064e3b" fill-opacity="0.5"/>
+                            <!-- Finial Spire -->
+                            <path d="M32 2V8M29 5H35" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+                            <!-- Minaret Silhouette -->
+                            <path d="M26 56V32L29 26L32 32V56" fill="#fbbf24"/>
+                            <!-- Digital Circuit Nodes -->
+                            <path d="M18 44L38 24M22 50L44 28M32 52L48 36" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="40" cy="22" r="3" fill="#022c22" stroke="#fbbf24" stroke-width="2"/>
+                            <circle cx="46" cy="26" r="3" fill="#022c22" stroke="#fbbf24" stroke-width="2"/>
+                            <circle cx="50" cy="34" r="3" fill="#022c22" stroke="#fbbf24" stroke-width="2"/>
+                            <defs>
+                                <linearGradient id="goldGrad" x1="12" y1="6" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#fde68a"/>
+                                    <stop offset="0.5" stop-color="#fbbf24"/>
+                                    <stop offset="1" stop-color="#d97706"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-english text-2xl font-extrabold tracking-tight gold-gradient-text block leading-none">digitalad.bd</span>
+                        <span class="font-english text-[10px] tracking-widest uppercase text-emerald-200/90 block mt-1">Digital Dawah & Automations</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu Links -->
+                <nav class="hidden lg:flex items-center gap-7 text-emerald-100 font-medium text-base">
+                    <a href="#home" class="hover:text-gold-400 transition">হোম</a>
+                    <a href="#problems" class="hover:text-gold-400 transition">সমস্যাসমূহ</a>
+                    <a href="#services" class="hover:text-gold-400 transition">আমাদের সার্ভিস</a>
+                    <a href="#packages" class="hover:text-gold-400 transition">১ বছরের রোডম্যাপ প্যাকেজ</a>
+                    <a href="#erp-demo" class="hover:text-gold-400 transition">মাদ্রাসা সফটওয়্যার</a>
+                    <a href="#about" class="hover:text-gold-400 transition">আমাদের লক্ষ্য</a>
+                    <a href="#faq" class="hover:text-gold-400 transition">প্রশ্নোত্তর</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20digitalad.bd-%E0%A6%8F%E0%A6%B0%20%E0%A6%A1%E0%A6%BF%E0%A6%9C%E0%A6%BF%E0%A6%9F%E0%A6%BE%E0%A6%B2%20%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AD%E0%A6%BF%E0%A6%B8%20%E0%A6%B8%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A7%87%20%E0%A6%AB%E0%A7%8D%E0%A6%B0%E0%A6%BF%20%E0%A6%AA%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%B0%E0%A7%8D%E0%A6%B6%20%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" rel="noopener noreferrer" class="gold-gradient-bg text-emerald-950 font-bold px-5 py-2.5 rounded-xl shadow-lg hover:brightness-110 transition flex items-center gap-2 text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>ফ্রি পরামর্শ নিন</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" aria-label="Menu" class="lg:hidden text-emerald-100 hover:text-gold-400 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-emerald-900 border-b border-emerald-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block py-2 px-3 rounded-lg text-emerald-100 hover:bg-emerald-800 hover:text-gold-400">হোম</a>
+            <a href="#problems" class="mobile-link block py-2 px-3 rounded-lg text-emerald-100 hover:bg-emerald-800 hover:text-gold-400">সমস্যাসমূহ</a>
+            <a href="#services" class="mobile-link block py-2 px-3 rounded-lg text-emerald-100 hover:bg-emerald-800 hover:text-gold-400">আমাদের ৪টি সার্ভিস</a>
+            <a href="#packages" class="mobile-link block py-2 px-3 rounded-lg text-emerald-100 hover:bg-emerald-800 hover:text-gold-400">পার্সোনাল ব্র্যান্ডিং প্যাকেজ</a>
+            <a href="#erp-demo" class="mobile-link block py-2 px-3 rounded-lg text-emerald-100 hover:bg-emerald-800 hover:text-gold-400">মাদ্রাসা হিসাব সফটওয়্যার</a>
+            <a href="#about" class="mobile-link block py-2 px-3 rounded-lg text-emerald-100 hover:bg-emerald-800 hover:text-gold-400">আমাদের লক্ষ্য</a>
+            <a href="#faq" class="mobile-link block py-2 px-3 rounded-lg text-emerald-100 hover:bg-emerald-800 hover:text-gold-400">সাধারণ জিজ্ঞাসা</a>
+            <div class="pt-2">
+                <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20digitalad.bd-%E0%A6%8F%E0%A6%B0%20%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AD%E0%A6%BF%E0%A6%B8%20%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="w-full gold-gradient-bg text-emerald-950 font-bold py-3 px-4 rounded-xl flex justify-center items-center gap-2 shadow-md">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> ফ্রি কনসালটেশন নিন (WhatsApp)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <section id="home" class="islamic-pattern relative text-white py-16 md:py-24 lg:py-28 overflow-hidden">
+        <!-- Ambient Glow -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-emerald-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: High-Converting Copy -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-900/90 border border-gold-400/40 text-gold-400 text-xs sm:text-sm font-semibold shadow-sm">
+                        <i class="fa-solid fa-star-and-crescent"></i>
+                        <span>ডিজিটাল দাওয়াহ ও ইসলামিক প্রতিষ্ঠান অটোমেশনের বিশ্বস্ত প্ল্যাটফর্ম</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+                        আপনার বয়ান পৌঁছাক <span class="gold-gradient-text underline decoration-gold-500/40">কোটি হৃদয়ে</span>, আপনার প্রতিষ্ঠানের সুনাম ছড়িয়ে পড়ুক দেশজুড়ে।
+                    </h1>
+
+                    <p class="text-emerald-100/90 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        মাহফিলের মাঠে আপনার বক্তব্য শুনছেন কয়েক হাজার মানুষ, কিন্তু সঠিক ডিজিটাল ব্যবস্থাপনায় সেই একই বক্তব্য শুনতে পারে দেশ-বিদেশের কোটি মুসলিম। অন্য কারো চ্যানেলে আপনার পরিচিতি নয়—আমরা গড়ে তুলব আপনার নিজস্ব <strong class="text-gold-400 font-semibold">অথেনটিক ইসলামিক মিডিয়া ব্র্যান্ড</strong>।
+                    </p>
+
+                    <!-- Dual CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%86%E0%A6%AE%E0%A6%BE%E0%A6%B0%20%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A7%8B%E0%A6%A8%E0%A6%BE%E0%A6%B2%20%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A6%BF%E0%A6%82%20%E0%A6%AC%E0%A6%BE%20%E0%A6%AE%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%B0%20%E0%A6%A1%E0%A6%BF%E0%A6%9C%E0%A6%BF%E0%A6%9F%E0%A6%BE%E0%A6%B2%20%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AD%E0%A6%BF%E0%A6%B8%20%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87%20%E0%A6%95%E0%A6%A5%E0%A6%BE%20%E0%A6%AC%E0%A6%B2%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="w-full sm:w-auto gold-gradient-bg text-emerald-950 font-bold text-base sm:text-lg px-7 py-4 rounded-xl shadow-xl hover:brightness-110 transition flex items-center justify-center gap-3 animate-pulse-slow">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>ফ্রি কনসালটেশন নিন (WhatsApp)</span>
+                        </a>
+                        <a href="#packages" class="w-full sm:w-auto bg-emerald-900/80 hover:bg-emerald-800 text-white border border-emerald-700 font-semibold text-base sm:text-lg px-7 py-4 rounded-xl transition flex items-center justify-center gap-2">
+                            <span>সার্ভিস ও প্যাকেজগুলো দেখুন</span>
+                            <i class="fa-solid fa-arrow-down text-gold-400 text-sm"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="pt-6 border-t border-emerald-800/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-emerald-200">
+                        <div class="flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fa-solid fa-circle-check text-gold-400"></i>
+                            <span>১০০% হালাল ও শরীয়াহ-সম্মত কৌশল</span>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fa-solid fa-circle-check text-gold-400"></i>
+                            <span>অর্গানিক গ্রোথ (SEO, AEO ও GEO)</span>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2">
+                            <i class="fa-solid fa-circle-check text-gold-400"></i>
+                            <span>সার্বক্ষণিক ডেডিকেটেড সাপোর্ট</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Analytics & Brand Preview Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-gradient-to-b from-emerald-900/90 to-emerald-950/95 border border-gold-500/30 rounded-2xl p-5 sm:p-6 shadow-2xl relative">
+                        <div class="flex items-center justify-between border-b border-emerald-800 pb-4 mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full gold-gradient-bg flex items-center justify-center text-emerald-950 font-bold text-lg">
+                                    <i class="fa-solid fa-microphone-lines"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-white text-sm sm:text-base">স্কলারস অফিসিয়াল মিডিয়া ড্যাশবোর্ড</h3>
+                                    <p class="text-xs text-emerald-300">অর্গানিক ব্র্যান্ড গ্রোথ ও সার্চ র‍্যাংকিং প্রিভিউ</p>
+                                </div>
+                            </div>
+                            <span class="bg-emerald-800 text-gold-400 text-xs px-2.5 py-1 rounded-full font-english font-semibold border border-gold-400/30">Verified Growth</span>
+                        </div>
+
+                        <!-- Platform Growth Bars -->
+                        <div class="space-y-4">
+                            <div class="bg-emerald-950/70 p-3.5 rounded-xl border border-emerald-800/70">
+                                <div class="flex justify-between items-center text-xs sm:text-sm mb-1.5">
+                                    <span class="flex items-center gap-2 font-medium text-white"><i class="fa-brands fa-youtube text-red-500 text-lg"></i> অফিসিয়াল ইউটিউব চ্যানেল</span>
+                                    <span class="text-gold-400 font-bold">+৩৪০% অর্গানিক ভিউ</span>
+                                </div>
+                                <div class="w-full bg-emerald-900 h-2.5 rounded-full overflow-hidden">
+                                    <div class="gold-gradient-bg h-full rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-emerald-950/70 p-3.5 rounded-xl border border-emerald-800/70">
+                                <div class="flex justify-between items-center text-xs sm:text-sm mb-1.5">
+                                    <span class="flex items-center gap-2 font-medium text-white"><i class="fa-brands fa-facebook text-blue-400 text-lg"></i> ভেরিফাইড ফেসবুক পেজ রিলস</span>
+                                    <span class="text-gold-400 font-bold">কোটি মুসলিমের কাছে রিচ</span>
+                                </div>
+                                <div class="w-full bg-emerald-900 h-2.5 rounded-full overflow-hidden">
+                                    <div class="bg-emerald-400 h-full rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+
+                            <div class="bg-emerald-950/70 p-3.5 rounded-xl border border-emerald-800/70">
+                                <div class="flex justify-between items-center text-xs sm:text-sm mb-1.5">
+                                    <span class="flex items-center gap-2 font-medium text-white"><i class="fa-brands fa-tiktok text-teal-300 text-lg"></i> তরুণ প্রজন্মের দাওয়াহ শর্টস</span>
+                                    <span class="text-gold-400 font-bold">নিয়মিত ভাইরাল ক্লিপস</span>
+                                </div>
+                                <div class="w-full bg-emerald-900 h-2.5 rounded-full overflow-hidden">
+                                    <div class="gold-gradient-bg h-full rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SEO / AEO / GEO Badge Box -->
+                        <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+                            <div class="bg-emerald-900/60 p-2.5 rounded-xl border border-emerald-800">
+                                <span class="font-english font-bold text-gold-400 text-sm block">SEO #1</span>
+                                <span class="text-[11px] text-emerald-200">গুগল ও ইউটিউব টপ</span>
+                            </div>
+                            <div class="bg-emerald-900/60 p-2.5 rounded-xl border border-emerald-800">
+                                <span class="font-english font-bold text-gold-400 text-sm block">AEO Ready</span>
+                                <span class="text-[11px] text-emerald-200">ভয়েস ও প্রশ্ন সার্চ</span>
+                            </div>
+                            <div class="bg-emerald-900/60 p-2.5 rounded-xl border border-emerald-800">
+                                <span class="font-english font-bold text-gold-400 text-sm block">GEO AI</span>
+                                <span class="text-[11px] text-emerald-200">AI ইঞ্জিন অপ্টিমাইজড</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE PAIN POINTS (বাস্তব সমস্যা) -->
+    <section id="problems" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-emerald-800 font-bold text-sm uppercase tracking-wider bg-emerald-100 px-3.5 py-1 rounded-full">বাস্তব সমস্যা ও উপলব্ধি</span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-slate-900 mt-3 leading-snug">
+                    আপনি কি আপনার দ্বীনি মেহনতের যথাযথ <span class="text-emerald-800 underline decoration-gold-500">ডিজিটাল মূল্যায়ন</span> পাচ্ছেন?
+                </h2>
+                <p class="text-slate-600 mt-3 text-base sm:text-lg">
+                    সঠিক ডিজিটাল ব্যবস্থাপনার অভাবে বাংলাদেশের সম্মানিত আলেম ও ঐতিহ্যবাহী মাদ্রাসাগুলো প্রতিনিয়ত যে ৪টি বড় ক্ষতির সম্মুখীন হচ্ছেন:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pain Point 1 -->
+                <div class="n8n-neon-card">
+                    <div class="n8n-card-inner bg-slate-50 p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-red-100 text-red-600 flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-video-slash"></i>
+                                </div>
+                                <span class="n8n-node-dot" title="Active Node"></span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">১. অন্যের চ্যানেলে কোটি ভিউ, নিজের প্ল্যাটফর্ম শূন্য</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                বিভিন্ন থার্ড-পার্টি মিডিয়া আপনার বয়ান রেকর্ড করে আপলোড দিয়ে লাখ লাখ টাকা ও ফলোয়ার আয় করছে, কিন্তু দিনশেষে আপনার নিজস্ব কোনো স্থায়ী ও অফিসিয়াল ডিজিটাল প্ল্যাটফর্ম গড়ে উঠছে না।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pain Point 2 -->
+                <div class="n8n-neon-card neon-delay-1">
+                    <div class="n8n-card-inner bg-slate-50 p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+                                <span class="n8n-node-dot" title="Active Node"></span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">২. ভুল থাম্বনেইল ও অসম্পূর্ণ ক্লিপিংয়ে ভাবমূর্তি সংকট</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                ভিউ বাড়ানোর আশায় অনেকে আপনার বক্তব্যের আগে-পিছে কেটে ভুল শিরোনাম বা বিতর্কিত থাম্বনেইল দিয়ে আপলোড করছে, যা আপনার দীর্ঘদিনের অর্জিত সম্মান ও দাওয়াহকে প্রশ্নবিদ্ধ করছে।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pain Point 3 -->
+                <div class="n8n-neon-card neon-delay-2">
+                    <div class="n8n-card-inner bg-slate-50 p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-bullhorn"></i>
+                                </div>
+                                <span class="n8n-node-dot" title="Active Node"></span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">৩. মাদ্রাসার ছাত্র ভর্তি ও ফান্ডের সংকট</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                প্রথাগত পোস্টার, লিফলেট বা মাইকিংয়ে এখন আর সচেতন অভিভাবক ও দাতাদের কাছে পৌঁছানো যায় না। ড্রোন ভিজ্যুয়াল ও টার্গেটেড ফেসবুক প্রচার না থাকায় পিছিয়ে পড়ছে আপনার প্রতিষ্ঠান।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pain Point 4 -->
+                <div class="n8n-neon-card neon-delay-3">
+                    <div class="n8n-card-inner bg-slate-50 p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+                                <span class="n8n-node-dot" title="Active Node"></span>
+                            </div>
+                            <h3 class="text-lg font-bold text-slate-900 mb-2">৪. খাতা-কলমের জটিল ও সময়সাপেক্ষ হিসাব</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                মাদ্রাসার ছাত্র বেতন, বোর্ডিং খরচ এবং লিল্লাহ ফান্ডের আয়-ব্যয়ের হিসাব খাতায় লিখতে গিয়ে প্রচুর সময় নষ্ট হয় এবং দ্রুত অডিট রিপোর্ট ও রসিদ তৈরিতে জটিলতা সৃষ্টি হয়।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: OUR 4 SPECIALIZED SERVICES -->
+    <section id="services" class="py-16 md:py-24 bg-slate-100/80 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-emerald-900 font-bold text-sm uppercase tracking-wider bg-gold-400/30 px-4 py-1 rounded-full">আমাদের কমপ্লিট সলিউশন</span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-slate-900 mt-3">
+                    আলেম ও মাদ্রাসার জন্য আমাদের <span class="text-emerald-800">৪টি বিশেষায়িত সার্ভিস</span>
+                </h2>
+                <p class="text-slate-600 mt-3 text-base sm:text-lg">
+                    আপনার শুধু কাজ হবে দ্বীনি বয়ান ও প্রতিষ্ঠান পরিচালনা করা; আর প্রযুক্তিগত সকল দায়িত্ব শতভাগ আমানতদারিতার সাথে পালন করব আমরা।
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Service 01: Personal Branding -->
+                <div class="n8n-neon-card n8n-neon-card-dual">
+                    <div class="n8n-card-inner bg-white p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-5">
+                                <div class="w-14 h-14 rounded-2xl bg-emerald-900 text-gold-400 flex items-center justify-center text-2xl shrink-0 shadow-md">
+                                    <i class="fa-solid fa-user-check"></i>
+                                </div>
+                                <span class="bg-emerald-100 text-emerald-900 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-2">
+                                    <span class="n8n-node-dot"></span> সার্ভিস নাম্বার ০১
+                                </span>
+                            </div>
+                            <p class="text-xs font-bold text-gold-600 uppercase tracking-wider mb-1">মাঠের দাওয়াহ এবার বিশ্বমঞ্চে</p>
+                            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                                ইসলামিক স্কলারদের পার্সোনাল ব্র্যান্ডিং ও সোশ্যাল মিডিয়া ম্যানেজমেন্ট
+                            </h3>
+                            <p class="text-slate-600 text-sm sm:text-base mb-5">
+                                আপনার রেকর্ড করা ওয়াজ বা মাহফিলের ভিডিও আমাদের দেবেন; সেটিকে এডিট করে প্রতিদিন বা সপ্তাহে আপনার নিজস্ব ফেসবুক, ইউটিউব ও টিকটকে আপলোড করে আপনার ব্র্যান্ড প্রতিষ্ঠিত করব।
+                            </p>
+                            <ul class="space-y-2.5 text-sm text-slate-700 mb-6">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>প্রফেশনাল ভিডিও এডিটিং:</strong> রিলস, ইউটিউব শর্টস, টিকটক ও পূর্ণাঙ্গ ওয়াজ এডিটিং এবং নিয়মিত আপলোড।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>থাম্বনেইল ও গ্রাফিক্স:</strong> মার্জিত, আকর্ষণীয় থাম্বনেইল ও ইসলামিক উক্তি পোস্টার ডিজাইন।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>কন্টেন্ট রাইটিং:</strong> কোরআন-হাদিসের রেফারেন্সসহ প্রফেশনাল ক্যাপশন ও আর্টিকেল লেখা।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>অর্গানিক SEO, AEO ও GEO:</strong> সার্চ ইঞ্জিনে ও AI সার্চে আপনার প্রোফাইল ও চ্যানেল টপে র‍্যাংক করানো।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>পেইড অ্যাডস সাপোর্ট:</strong> প্রয়োজনে টার্গেটেড পেইড বিজ্ঞাপন রান ও সম্পূর্ণ ম্যানেজমেন্ট।</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-3">
+                            <a href="#packages" class="flex-1 bg-emerald-900 hover:bg-emerald-800 text-white font-semibold py-3 px-4 rounded-xl text-center text-sm transition">
+                                ৩, ৬ ও ১২ মাসের প্যাকেজ দেখুন
+                            </a>
+                            <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AD%E0%A6%BF%E0%A6%B8%20%E0%A7%A6%E0%A7%A7%20(%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A7%8B%E0%A6%A8%E0%A6%BE%E0%A6%B2%20%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A6%BF%E0%A6%82)%20%E0%A6%B8%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A7%87%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="gold-gradient-bg text-emerald-950 font-bold py-3 px-5 rounded-xl text-sm flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> অর্ডার করুন
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 02: Madrasa Accounting Software -->
+                <div class="n8n-neon-card n8n-neon-card-dual neon-delay-1">
+                    <div class="n8n-card-inner bg-white p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-5">
+                                <div class="w-14 h-14 rounded-2xl bg-emerald-900 text-gold-400 flex items-center justify-center text-2xl shrink-0 shadow-md">
+                                    <i class="fa-solid fa-calculator"></i>
+                                </div>
+                                <span class="bg-emerald-100 text-emerald-900 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-2">
+                                    <span class="n8n-node-dot"></span> সার্ভিস নাম্বার ০২
+                                </span>
+                            </div>
+                            <p class="text-xs font-bold text-gold-600 uppercase tracking-wider mb-1">খাতা-কলমের ঝামেলা শেষ, আর্থিক স্বচ্ছতায় পূর্ণ বিশ্বাস</p>
+                            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                                মাদ্রাসার জন্য আয়-ব্যয়ের হিসাব সফটওয়্যার / ওয়েব অ্যাপ
+                            </h3>
+                            <p class="text-slate-600 text-sm sm:text-base mb-5">
+                                মাদ্রাসার যাবতীয় আয়-ব্যয়, ছাত্র বেতন, লিল্লাহ ফান্ড ও শিক্ষক-কর্মচারীদের বেতন এক ক্লিকে নির্ভুলভাবে পরিচালনার জন্য আধুনিক ক্লাউড ওয়েব অ্যাপ।
+                            </p>
+                            <ul class="space-y-2.5 text-sm text-slate-700 mb-6">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>সকল ফান্ডের আলাদা হিসাব:</strong> সাধারণ ফান্ড, লিল্লাহ/যাকাত ফান্ড, গোরাবা ও বোর্ডিং ফান্ডের স্বতন্ত্র লেজার।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>ছাত্র ফি ও এসএমএস অ্যালার্ট:</strong> মাসিক বেতন আদায়, বকেয়া তালিকা ও অভিভাবকদের মোবাইলে অটোমেটিক রসিদ বার্তা।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>১-ক্লিকে অডিট ও PDF রিপোর্ট:</strong> দৈনিক, মাসিক ও বার্ষিক আয়-ব্যয়ের পূর্ণাঙ্গ ব্যালেন্স শিট প্রিন্ট।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>মোবাইল ও কম্পিউটার বান্ধব:</strong> মুহতামিম বা হিসাবরক্ষক যেকোনো স্থান থেকে সহজেই ব্যবহার করতে পারবেন।</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-3">
+                            <a href="#erp-demo" class="flex-1 bg-slate-100 hover:bg-slate-200 text-emerald-950 font-semibold py-3 px-4 rounded-xl text-center text-sm transition">
+                                সফটওয়্যার লাইভ ডেমো দেখুন
+                            </a>
+                            <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%AE%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%B0%20%E0%A6%86%E0%A6%AF%E0%A6%BC-%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%B0%20%E0%A6%B9%E0%A6%BF%E0%A6%B8%E0%A6%BE%E0%A6%AC%20%E0%A6%B8%E0%A6%AB%E0%A6%9F%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%20%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="gold-gradient-bg text-emerald-950 font-bold py-3 px-5 rounded-xl text-sm flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> অর্ডার করুন
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 03: Drone, Photoshoot & Paid Ads for Madrasa -->
+                <div class="n8n-neon-card n8n-neon-card-dual neon-delay-2">
+                    <div class="n8n-card-inner bg-white p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-5">
+                                <div class="w-14 h-14 rounded-2xl bg-emerald-900 text-gold-400 flex items-center justify-center text-2xl shrink-0 shadow-md">
+                                    <i class="fa-solid fa-camera-rotate"></i>
+                                </div>
+                                <span class="bg-emerald-100 text-emerald-900 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-2">
+                                    <span class="n8n-node-dot"></span> সার্ভিস নাম্বার ০৩
+                                </span>
+                            </div>
+                            <p class="text-xs font-bold text-gold-600 uppercase tracking-wider mb-1">আপনার প্রতিষ্ঠানের শৃঙ্খলা ও মেধা ফুটে উঠুক ডিজিটাল পর্দায়</p>
+                            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                                মাদ্রাসার জন্য ফটোশুট, ড্রোন ভিডিও ও ফেসবুক বিজ্ঞাপন
+                            </h3>
+                            <p class="text-slate-600 text-sm sm:text-base mb-5">
+                                ভর্তি মৌসুমে ছাত্র সংখ্যা বৃদ্ধি এবং মাদ্রাসার উন্নয়নমূলক কাজে দাতাদের আকৃষ্ট করতে প্রফেশনাল মিডিয়া প্রোডাকশন ও হাই-কনভার্টিং অ্যাড ক্যাম্পেইন।
+                            </p>
+                            <ul class="space-y-2.5 text-sm text-slate-700 mb-6">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>প্রফেশনাল ড্রোন ভিডিওগ্রাফি:</strong> আকাশ থেকে মাদ্রাসার পুরো ক্যাম্পাস ও মনোরম পরিবেশের সিনেমাটিক দৃশ্য ধারণ।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>নরমাল ভিডিও ও ফটোশুট:</strong> ক্লাসরুম, হিফজখানা, লাইব্রেরি ও ছাত্রদের পাঠদানের এইচডি ফটো ও ডকুমেন্টারি ভিডিও।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>প্রিমিয়াম ভিডিও এডিটিং:</strong> ভয়েসওভার, ইসলামিক নাশিদ/হামদ ও আকর্ষণীয় মোশন গ্রাফিক্স সহ বিজ্ঞাপন ভিডিও তৈরি।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>টার্গেটেড ফেসবুক বিজ্ঞাপন ম্যানেজমেন্ট:</strong> নির্দিষ্ট এলাকা বা প্রবাসীদের টার্গেট করে অ্যাড রান ও লিড সংগ্রহ।</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-3">
+                            <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B0%20%E0%A6%AE%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%B0%20%E0%A6%AB%E0%A6%9F%E0%A7%8B%E0%A6%B6%E0%A7%81%E0%A6%9F%2C%20%E0%A6%A1%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%A8%20%E0%A6%AD%E0%A6%BF%E0%A6%A1%E0%A6%BF%E0%A6%93%20%E0%A6%93%20%E0%A6%AB%E0%A7%87%E0%A6%B8%E0%A6%AC%E0%A7%81%E0%A6%95%20%E0%A6%AC%E0%A6%BF%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%BE%E0%A6%AA%E0%A6%A8%E0%A7%87%E0%A6%B0%20%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%87%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="w-full gold-gradient-bg text-emerald-950 font-bold py-3 px-5 rounded-xl text-sm flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> বুকিং ও বিস্তারিত জানতে মেসেজ দিন
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 04: Custom Madrasa Website -->
+                <div class="n8n-neon-card n8n-neon-card-dual neon-delay-3">
+                    <div class="n8n-card-inner bg-white p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-4 mb-5">
+                                <div class="w-14 h-14 rounded-2xl bg-emerald-900 text-gold-400 flex items-center justify-center text-2xl shrink-0 shadow-md">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <span class="bg-emerald-100 text-emerald-900 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-2">
+                                    <span class="n8n-node-dot"></span> সার্ভিস নাম্বার ০৪
+                                </span>
+                            </div>
+                            <p class="text-xs font-bold text-gold-600 uppercase tracking-wider mb-1">একটি স্থায়ী ডিজিটাল ঠিকানা, যা বাড়াবে প্রতিষ্ঠানের গ্রহণযোগ্যতা</p>
+                            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                                মাদ্রাসার জন্য আধুনিক ও কাস্টম ওয়েবসাইট তৈরি
+                            </h3>
+                            <p class="text-slate-600 text-sm sm:text-base mb-5">
+                                দেশ ও বিদেশের শুভাকাঙ্ক্ষী এবং অভিভাবকদের কাছে আপনার মাদ্রাসার পরিচিতি, স্বচ্ছতা ও আধুনিকতার স্বাক্ষর তুলে ধরতে রেসপন্সিভ ওয়েবসাইট।
+                            </p>
+                            <ul class="space-y-2.5 text-sm text-slate-700 mb-6">
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>প্রতিষ্ঠানের পূর্ণাঙ্গ তথ্যভাণ্ডার:</strong> মাদ্রাসার ইতিহাস, লক্ষ্য, মুহতামিমের বাণী, শিক্ষক তালিকা ও বিভাগসমূহ।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>অনলাইন ভর্তি ও ফলাফল:</strong> ঘরে বসেই নতুন ছাত্রদের ভর্তির আবেদন এবং পরীক্ষার রেজাল্ট দেখার সুবিধা।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>অনলাইন ডোনেশন গেটওয়ে:</strong> বিকাশ, নগদ বা ব্যাংক কার্ডের মাধ্যমে যাকাত ও সদকায়ে জারিয়ার অনুদান সংগ্রহ।</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-700 mt-1"></i>
+                                    <span><strong>সুপার ফাস্ট ও সিকিউরড:</strong> মোবাইল ফ্রেন্ডলি ডিজাইন, এসইও অপ্টিমাইজড ও সহজ কন্ট্রোল প্যানেল।</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-3">
+                            <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%86%E0%A6%AE%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B0%20%E0%A6%AE%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B8%E0%A6%BE%E0%A6%B0%20%E0%A6%9C%E0%A6%A8%E0%A7%8D%E0%A6%AF%20%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BF%20%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%AC%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%9F%20%E0%A6%A4%E0%A7%88%E0%A6%B0%E0%A6%BF%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="w-full gold-gradient-bg text-emerald-950 font-bold py-3 px-5 rounded-xl text-sm flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> ওয়েবসাইটের জন্য কথা বলুন
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE MADRASA ERP SOFTWARE MINI PREVIEW -->
+    <section id="erp-demo" class="py-14 bg-emerald-950 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="bg-gold-500/20 text-gold-400 border border-gold-400/30 text-xs font-bold px-3 py-1 rounded-full">লাইভ ইন্টারফেস প্রিভিউ</span>
+                    <h3 class="text-2xl sm:text-3xl font-bold leading-snug">
+                        মাদ্রাসা হিসাব সফটওয়্যারটি দেখতে ও ব্যবহার করতে কেমন?
+                    </h3>
+                    <p class="text-emerald-200 text-sm sm:text-base leading-relaxed">
+                        ডানপাশের বাটনগুলোতে ক্লিক করে দেখুন—কত সহজে একজন মুহতামিম বা হিসাবরক্ষক কোনো জটিল ট্রেনিং ছাড়াই মাদ্রাসার সম্পূর্ণ আয়-ব্যয় ও লিল্লাহ ফান্ডের হিসাব রাখতে পারেন।
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <button onclick="switchErpTab('summary')" id="tab-btn-summary" class="erp-tab-btn gold-gradient-bg text-emerald-950 font-bold px-4 py-2 rounded-lg text-xs sm:text-sm transition">
+                            ১. আজকের ক্যাশ ও ফান্ড রিপোর্ট
+                        </button>
+                        <button onclick="switchErpTab('lillah')" id="tab-btn-lillah" class="erp-tab-btn bg-emerald-900 text-emerald-100 hover:bg-emerald-800 font-semibold px-4 py-2 rounded-lg text-xs sm:text-sm border border-emerald-700 transition">
+                            ২. লিল্লাহ ও যাকাত ফান্ড
+                        </button>
+                        <button onclick="switchErpTab('students')" id="tab-btn-students" class="erp-tab-btn bg-emerald-900 text-emerald-100 hover:bg-emerald-800 font-semibold px-4 py-2 rounded-lg text-xs sm:text-sm border border-emerald-700 transition">
+                            ৩. ছাত্র বেতন ও SMS রসিদ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interactive Mockup Screen -->
+                <div class="lg:col-span-7">
+                    <div class="bg-white text-slate-900 rounded-2xl shadow-2xl border-4 border-emerald-800 overflow-hidden">
+                        <!-- Mockup Window Topbar -->
+                        <div class="bg-slate-100 px-4 py-3 border-b border-slate-200 flex justify-between items-center">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                                <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                                <span class="text-xs font-bold text-slate-700 ml-2">মাদ্রাসা হিসাব ও অটোমেশন প্যানেল (digitalad.bd)</span>
+                            </div>
+                            <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-0.5 rounded">১০০% নিরাপদ ক্লাউড</span>
+                        </div>
+
+                        <!-- Tab Content 1: Summary -->
+                        <div id="erp-content-summary" class="p-5 sm:p-6 space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div class="bg-emerald-50 border border-emerald-200 p-3.5 rounded-xl">
+                                    <span class="text-xs text-slate-500 block">মোট মাসিক জমা (আয়)</span>
+                                    <span class="text-xl font-bold text-emerald-900">৳ ৪,৮৫,৫০০</span>
+                                    <span class="text-[11px] text-emerald-700 block mt-1"><i class="fa-solid fa-check"></i> রসিদ ভেরিফাইড</span>
+                                </div>
+                                <div class="bg-amber-50 border border-amber-200 p-3.5 rounded-xl">
+                                    <span class="text-xs text-slate-500 block">মোট মাসিক খরচ (ব্যয়)</span>
+                                    <span class="text-xl font-bold text-amber-800">৳ ৩,১২,০০০</span>
+                                    <span class="text-[11px] text-amber-700 block mt-1">বোর্ডিং ও বেতনসহ</span>
+                                </div>
+                                <div class="bg-slate-900 text-white p-3.5 rounded-xl">
+                                    <span class="text-xs text-slate-300 block">বর্তমান স্থিতি (হাতে জমা)</span>
+                                    <span class="text-xl font-bold text-gold-400">৳ ১,৭৩,৫০০</span>
+                                    <span class="text-[11px] text-emerald-300 block mt-1">অডিট প্রস্তুত</span>
+                                </div>
+                            </div>
+                            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 flex flex-wrap justify-between items-center gap-2 text-xs sm:text-sm">
+                                <span><i class="fa-solid fa-file-pdf text-red-600 mr-1"></i> এক ক্লিকে কমিটির জন্য মাসিক অডিট রিপোর্ট ডাউনলোড রেডি।</span>
+                                <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%AE%E0%A6%BE%E0%A6%A6%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%B8%E0%A6%BE%20%E0%A6%B9%E0%A6%BF%E0%A6%B8%E0%A6%BE%E0%A6%AC%20%E0%A6%B8%E0%A6%AB%E0%A6%9F%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%E0%A7%87%E0%A6%B0%20%E0%A6%AC%E0%A6%BF%E0%A6%B8%E0%A7%8D%E0%A6%A4%E0%A6%BE%E0%A6%B0%E0%A6%BF%E0%A6%A4%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="text-emerald-800 font-bold underline">ডেমো বুক করুন →</a>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content 2: Lillah Fund -->
+                        <div id="erp-content-lillah" class="hidden p-5 sm:p-6 space-y-3">
+                            <h4 class="font-bold text-sm text-emerald-900">লিল্লাহ ও এতিম ফান্ডের স্বতন্ত্র হিসাব (শরীয়াহ-সম্মত খাতওয়ারী)</h4>
+                            <div class="divide-y divide-slate-200 text-xs sm:text-sm bg-slate-50 rounded-xl p-3 border border-slate-200">
+                                <div class="py-2 flex justify-between">
+                                    <span>জনাব আব্দুল করিম (যাকাত তহবিল অনুদান)</span>
+                                    <span class="font-bold text-emerald-700">+ ৳ ৫০,০০০ (SMS প্রেরিত)</span>
+                                </div>
+                                <div class="py-2 flex justify-between">
+                                    <span>এতিম ও গোরাবা ছাত্রদের মাসিক খোরাকি বাবদ ব্যয়</span>
+                                    <span class="font-bold text-red-600">- ৳ ২৮,৫০০ (ভাউচার #১০৪)</span>
+                                </div>
+                                <div class="py-2 flex justify-between font-bold text-slate-900">
+                                    <span>লিল্লাহ ফান্ডের বর্তমান নিট ব্যালেন্স:</span>
+                                    <span class="text-emerald-800">৳ ২,১৫,০০০</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content 3: Student Fees -->
+                        <div id="erp-content-students" class="hidden p-5 sm:p-6 space-y-3">
+                            <h4 class="font-bold text-sm text-emerald-900">ছাত্র ভর্তি ও মাসিক বেতন আদায় (অটোমেটিক SMS সিস্টেম)</h4>
+                            <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3.5 text-xs sm:text-sm space-y-2">
+                                <div class="flex justify-between items-center">
+                                    <span><strong>নাম:</strong> মো: আব্দুল্লাহ আল মামুন (হিফজ বিভাগ - রোল ১২)</span>
+                                    <span class="bg-emerald-700 text-white text-[11px] px-2 py-0.5 rounded">পরিশোধিত</span>
+                                </div>
+                                <p class="text-slate-600 text-xs">আবাসিক ও খোরাকি ফি: ৳ ৩,৫০০ জমা হয়েছে। অভিভাবকের মোবাইলে ডিজিটাল রসিদ ও কনফার্মেশন SMS চলে গেছে।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: 1-YEAR ROADMAP PERSONAL BRANDING PACKAGES -->
+    <section id="packages" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Logic + Emotion Header -->
+            <div class="text-center max-w-4xl mx-auto mb-12">
+                <span class="bg-emerald-100 text-emerald-900 font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full uppercase tracking-wider">
+                    দ্য ১-ইয়ার রোডম্যাপ টু সার্চ টপ (The 1-Year Roadmap)
+                </span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-slate-900 mt-4 leading-snug">
+                    ১ বছরের লক্ষ্যভিত্তিক <span class="text-emerald-800">পার্সোনাল ব্র্যান্ডিং প্যাকেজ</span>
+                </h2>
+                
+                <!-- Highlighted Logic Box -->
+                <div class="mt-6 bg-gradient-to-r from-emerald-950 via-emerald-900 to-emerald-950 text-white p-6 sm:p-8 rounded-2xl shadow-xl border border-gold-400/40 relative">
+                    <i class="fa-solid fa-quote-left text-gold-400/30 text-4xl absolute top-4 left-4"></i>
+                    <p class="text-base sm:text-lg leading-relaxed font-medium relative z-10">
+                        "সোশ্যাল মিডিয়ায় ১ দিনে বা ১ মাসে রাতারাতি ব্র্যান্ড হওয়া অসম্ভব। একটি নতুন ইউটিউব চ্যানেল বা ফেসবুক পেজকে <strong class="text-gold-400">সার্চের শীর্ষে (Search Top)</strong> নিয়ে যেতে কমপক্ষে <strong class="text-gold-400">১ বছরের নিয়মিত পোস্ট, SEO এবং AEO</strong> কার্যক্রম প্রয়োজন। তাই ১ বছরের চূড়ান্ত টার্গেটকে সামনে রেখে ৩ মাসে, ৬ মাসে এবং ১২ মাসে যা অর্জন করা সম্ভব, তা দিয়ে আমাদের এই ৩ ধাপের বাস্তবসম্মত প্যাকেজ সাজানো হয়েছে।"
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visual 3-Step Progression Bar -->
+            <div class="max-w-5xl mx-auto mb-14 hidden md:grid grid-cols-3 gap-4 text-center">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 relative">
+                    <span class="text-xs font-bold text-emerald-800 uppercase">ধাপ ১ (১ম - ৩য় মাস)</span>
+                    <h4 class="font-bold text-slate-900 mt-1">ভিত্তি স্থাপন ও চ্যানেল সেটআপ</h4>
+                    <p class="text-xs text-slate-500 mt-1">সার্চ অ্যালগরিদমে আপনার নামের ইনডেক্সিং শুরু</p>
+                </div>
+                <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-300 relative">
+                    <span class="text-xs font-bold text-emerald-900 uppercase">ধাপ ২ (৪র্থ - ৬ষ্ঠ মাস)</span>
+                    <h4 class="font-bold text-emerald-950 mt-1">অর্গানিক গ্রোথ ও AI সার্চ র‍্যাংকিং</h4>
+                    <p class="text-xs text-emerald-700 mt-1">নিয়মিত রিলস/ভিডিও ভাইরাল ও দর্শক বৃদ্ধি</p>
+                </div>
+                <div class="bg-amber-50 p-4 rounded-xl border border-gold-500 relative">
+                    <span class="text-xs font-bold text-amber-900 uppercase">ধাপ ৩ (৭ম - ১২শ মাস)</span>
+                    <h4 class="font-bold text-slate-900 mt-1">সার্চ টপ অথরিটি ও স্থায়ী ব্র্যান্ড</h4>
+                    <p class="text-xs text-amber-800 mt-1">ইউটিউব, ফেসবুক ও গুগল সার্চে শীর্ষস্থান দখল</p>
+                </div>
+            </div>
+
+            <!-- 3 Package Pricing Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Package 1: 3 Months (Foundation) -->
+                <div class="n8n-neon-card n8n-neon-card-dual">
+                    <div class="n8n-card-inner bg-slate-50 p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-slate-200 text-slate-800 text-xs font-bold px-3 py-1 rounded-full font-english">STEP 01: FOUNDATION</span>
+                                <span class="text-emerald-800 font-bold text-sm flex items-center gap-1.5"><span class="n8n-node-dot"></span> ৩ মাসের লক্ষ্যমাত্রা</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900">৩ মাসের টেস্ট ও সেটআপ প্যাকেজ</h3>
+                            <p class="text-slate-600 text-sm mt-2 pb-5 border-b border-slate-200">
+                                <strong>মূল লক্ষ্য:</strong> ১ বছরের টার্গেটের প্রথম ধাপ—শূন্য থেকে প্রফেশনাল চ্যানেল/পেজ তৈরি, ব্র্যান্ডিং লুক এবং দর্শকদের সাথে প্রাথমিক পরিচয়।
+                            </p>
+
+                            <ul class="space-y-3.5 my-6 text-sm text-slate-700">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-700 mt-1"></i>
+                                    <span><strong>ভিডিও এডিটিং ও আপলোড:</strong> প্রতি সপ্তাহে ৩-৪টি হাই-কোয়ালিটি রিলস/শর্টস এবং গুরুত্বপূর্ণ বয়ানের ক্লিপস।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-700 mt-1"></i>
+                                    <span><strong>থাম্বনেইল ও ব্র্যান্ড ডিজাইন:</strong> কাস্টম প্রোফাইল লোগো, কভার, ব্যানার ও প্রতিটি ভিডিওর প্রিমিয়াম থাম্বনেইল।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-700 mt-1"></i>
+                                    <span><strong>প্রাথমিক SEO সেটআপ:</strong> চ্যানেল কীওয়ার্ড রিসার্চ, ট্যাগ, ডেসক্রিপশন ও প্লে-লিস্ট অপ্টিমাইজেশন।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-700 mt-1"></i>
+                                    <span><strong>প্ল্যাটফর্ম:</strong> ফেসবুক পেজ ও ইউটিউব চ্যানেল প্রফেশনাল ম্যানেজমেন্ট ও সিডিউলিং।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-700 mt-1"></i>
+                                    <span><strong>কন্টেন্ট রাইটিং:</strong> ভিডিওর প্রাসঙ্গিক ইসলামিক ক্যাপশন ও শিরোনাম তৈরি।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-check text-emerald-700 mt-1"></i>
+                                    <span><strong>বিজ্ঞাপন (Ads):</strong> অর্গানিক রিচ যাচাই (প্রয়োজনে পেইড অ্যাড সেটআপ সুবিধা)।</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A7%8B%E0%A6%A8%E0%A6%BE%E0%A6%B2%20%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A6%BF%E0%A6%82%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%B0%20%27%E0%A7%A9%20%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A7%87%E0%A6%B0%20%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%E0%A7%87%E0%A6%9C%27%20%E0%A6%A8%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A7%87%20%E0%A6%B6%E0%A7%81%E0%A6%B0%E0%A7%81%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="w-full bg-emerald-900 hover:bg-emerald-800 text-white font-bold py-4 px-6 rounded-xl text-center transition flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> ৩ মাসের পরিকল্পনা শুরু করুন
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 2: 6 Months (Momentum - Highlighted Popular) -->
+                <div class="n8n-neon-card n8n-neon-card-dual neon-delay-1 transform lg:-translate-y-3 shadow-2xl">
+                    <div class="n8n-card-inner bg-emerald-950 text-white p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-center mb-4">
+                                <span class="gold-gradient-bg text-emerald-950 font-extrabold text-xs px-4 py-1 rounded-full shadow-md uppercase tracking-wider">
+                                    সর্বাধিক জনপ্রিয় (Recommended)
+                                </span>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-emerald-800 text-gold-400 text-xs font-bold px-3 py-1 rounded-full font-english">STEP 02: MOMENTUM</span>
+                                <span class="text-gold-400 font-bold text-sm flex items-center gap-1.5"><span class="n8n-node-dot"></span> ৬ মাসের লক্ষ্যমাত্রা</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">৬ মাসের গ্রোথ ও র‍্যাংকিং প্যাকেজ</h3>
+                            <p class="text-emerald-200 text-sm mt-2 pb-5 border-b border-emerald-800">
+                                <strong>মূল লক্ষ্য:</strong> ধারাবাহিক পোস্ট এবং অ্যাডভান্সড SEO ও AEO-এর মাধ্যমে ইউটিউব, ফেসবুক ও টিকটক সার্চে আপনার নাম ও ভিডিও দৃশ্যমান করা।
+                            </p>
+
+                            <ul class="space-y-3.5 my-6 text-sm text-emerald-100">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span><strong>ভিডিও এডিটিং ও আপলোড:</strong> প্রতি সপ্তাহে ৫-৬টি ভাইরাল উপযোগী রিলস/শর্টস + ১টি পূর্ণাঙ্গ বয়ান (লং ভিডিও)।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span><strong>থাম্বনেইল ও কোট পোস্টার:</strong> হাই-সিটিআর (Click-friendly) থাম্বনেইল + নিয়মিত সোশ্যাল মিডিয়া ইসলামিক উক্তি পোস্টার।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span><strong>অ্যাডভান্সড SEO + AEO + GEO:</strong> ভয়েস সার্চ বা টেক্সট সার্চে আপনার নাম যেন সামনে আসে তার বিশেষ অপ্টিমাইজেশন।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span><strong>৩টি প্ল্যাটফর্ম অটোমেশন:</strong> ফেসবুক, ইউটিউব ও টিকটকে নিয়মিত সিডিউল পোস্ট ও কমেন্ট মডারেশন।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-circle-check text-gold-400 mt-1"></i>
+                                    <span><strong>পেইড অ্যাডস ম্যানেজমেন্ট:</strong> ফলোয়ার ও সাবস্ক্রাইবার বৃদ্ধিতে প্রয়োজন অনুযায়ী টার্গেটেড অ্যাড রান ও মনিটরিং।</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%AA%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%B8%E0%A7%8B%E0%A6%A8%E0%A6%BE%E0%A6%B2%20%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A6%BF%E0%A6%82%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%B0%20%27%E0%A7%AC%20%E0%A6%AE%E0%A6%BE%E0%A6%B8%E0%A7%87%E0%A6%B0%20%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A7%8B%E0%A6%A5%20%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%E0%A7%87%E0%A6%9C%27%20%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="w-full gold-gradient-bg text-emerald-950 font-bold py-4 px-6 rounded-xl text-center hover:brightness-110 transition flex items-center justify-center gap-2 shadow-xl">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> ৬ মাসের গতিময় যাত্রা শুরু করুন
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 3: 12 Months (Dominance) -->
+                <div class="n8n-neon-card n8n-neon-card-dual neon-delay-2">
+                    <div class="n8n-card-inner bg-slate-50 p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full font-english">STEP 03: DOMINANCE</span>
+                                <span class="text-amber-700 font-bold text-sm flex items-center gap-1.5"><span class="n8n-node-dot"></span> ১২ মাসের সম্পূর্ণ লক্ষ্য</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900">১২ মাসের অথরিটি ও লিডারশিপ প্যাকেজ</h3>
+                            <p class="text-slate-600 text-sm mt-2 pb-5 border-b border-slate-200">
+                                <strong>মূল লক্ষ্য:</strong> ১ বছরব্যাপী নিরবচ্ছিন্ন কন্টেন্ট, SEO, AEO ও GEO-এর মাধ্যমে সার্চ রেজাল্টের শীর্ষে (Search Top) স্থান করে নেওয়া এবং স্থায়ী ব্র্যান্ড প্রতিষ্ঠা।
+                            </p>
+
+                            <ul class="space-y-3.5 my-6 text-sm text-slate-700">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-crown text-amber-600 mt-1"></i>
+                                    <span><strong>দৈনিক/আনলিমিটেড কন্টেন্ট ফ্লো:</strong> প্রতিদিন রিলস, শর্টস, ফুল ওয়াজ আপলোড এবং বিশেষ মাহফিলের জরুরি কভারেজ।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-crown text-amber-600 mt-1"></i>
+                                    <span><strong>ফুল মিডিয়া গ্রাফিক্স কিট:</strong> প্রিমিয়াম থাম্বনেইল, মাহফিলের পোস্টার, রমজান/ঈদ ক্যাম্পেইন গ্রাফিক্স ও আর্টিকেল।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-crown text-amber-600 mt-1"></i>
+                                    <span><strong>১ বছরের পূর্ণাঙ্গ SEO + AEO + GEO:</strong> গুগল, ইউটিউব, ফেসবুক ও AI সার্চে আপনাকে শীর্ষ অথরিটি হিসেবে প্রতিষ্ঠিত করা।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-crown text-amber-600 mt-1"></i>
+                                    <span><strong>২৪/৭ ভিআইপি চ্যানেল সিকিউরিটি:</strong> কপিরাইট প্রটেকশন, ফেইক চ্যানেল রিপোর্ট ও ভেরিফিকেশন সহায়তা।</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-crown text-amber-600 mt-1"></i>
+                                    <span><strong>কমপ্লিট পেইড ফানেল:</strong> সারা বছর বিশেষ দাওয়াহ ক্যাম্পেইনের অ্যাড স্ট্র্যাটেজি ও রিটার্গেটিং।</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A7%A7%20%E0%A6%AC%E0%A6%9B%E0%A6%B0%E0%A7%87%E0%A6%B0%20(%E0%A7%A7%E0%A7%A8%20%E0%A6%AE%E0%A6%BE%E0%A6%B8)%20%E0%A6%85%E0%A6%A5%E0%A6%B0%E0%A6%BF%E0%A6%9F%E0%A6%BF%20%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%A1%E0%A6%BF%E0%A6%82%20%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%95%E0%A7%87%E0%A6%9C%20%E0%A6%B8%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A7%87%20%E0%A6%86%E0%A6%B2%E0%A7%8B%E0%A6%9A%E0%A6%A8%E0%A6%BE%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="w-full bg-emerald-900 hover:bg-emerald-800 text-white font-bold py-4 px-6 rounded-xl text-center transition flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> ১২ মাসের স্থায়ী ব্র্যান্ডিং শুরু করুন
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: ABOUT ME & MISSION SECTION -->
+    <section id="about" class="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl border border-emerald-900/10 overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    
+                    <!-- Founder Identity Column -->
+                    <div class="lg:col-span-5 islamic-pattern text-white p-8 sm:p-10 flex flex-col justify-between relative">
+                        <div>
+                            <span class="inline-block bg-gold-500/20 border border-gold-400/40 text-gold-400 text-xs font-bold px-3 py-1 rounded-full mb-4">
+                                আমাদের পরিচয় ও অঙ্গীকার
+                            </span>
+                            <h3 class="text-2xl sm:text-3xl font-bold leading-snug mb-3">
+                                "ইসলামের বার্তা ছড়াক আধুনিকতায়, প্রতিটি দ্বীনি প্রতিষ্ঠান হোক প্রযুক্তিবান্ধব।"
+                            </h3>
+                            <p class="text-emerald-200 text-sm leading-relaxed">
+                                আমরা শুধু ব্যবসায়িক উদ্দেশ্যে কাজ করি না; আপনার প্রতিটি দ্বীনি কথা যেন সঠিক মানুষের কানে পৌঁছায়, সেটিই আমাদের সার্থকতা।
+                            </p>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-emerald-800 flex items-center gap-4">
+                            <div class="w-14 h-14 rounded-2xl gold-gradient-bg text-emerald-950 flex items-center justify-center font-bold text-2xl shrink-0 shadow-lg">
+                                ম
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white">মনিরুজ্জামান (Moniruzzaman)</h4>
+                                <p class="text-xs text-gold-400 font-medium">প্রতিষ্ঠাতা ও প্রধান ডিজিটাল স্ট্র্যাটেজিস্ট, digitalad.bd</p>
+                                <p class="text-xs text-emerald-300 mt-0.5"><i class="fa-solid fa-location-dot mr-1"></i> ঘাটাইল, টাঙ্গাইল, বাংলাদেশ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Emotional + Logical Mission Message -->
+                    <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center space-y-5">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">
+                            প্রযুক্তি ও দাওয়াহর মেলবন্ধন — কেন আমরা এটি করছি?
+                        </h2>
+                        <p class="text-slate-700 leading-relaxed text-base">
+                            আসসালামু আলাইকুম ওয়া রাহমাতুল্লাহ। আমি <strong>মনিরুজ্জামান</strong>, প্রতিষ্ঠাতা — <span class="font-english font-bold text-emerald-900">digitalad.bd</span>।
+                        </p>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            বর্তমান যুগ তথ্যপ্রযুক্তির যুগ। আজ বাতেল ও অনৈতিক কন্টেন্ট যখন আধুনিক প্রযুক্তির সর্বোচ্চ ব্যবহার করে তরুণ সমাজের চোখের সামনে চলে আসছে, তখন আমাদের হক্কানী উলামায়ে কেরামের অমূল্য হেদায়াতি বয়ান এবং আমাদের ঐতিহ্যবাহী মাদ্রাসাগুলো সঠিক ডিজিটাল ব্যবস্থাপনার অভাবে পিছিয়ে থাকবে—তা হতে পারে না।
+                        </p>
+                        <div class="bg-emerald-50 border-l-4 border-emerald-800 p-4 rounded-r-xl">
+                            <p class="text-emerald-950 font-semibold text-sm sm:text-base leading-relaxed">
+                                আমার মূল লক্ষ্য হলো—বাংলাদেশের সকল ইসলামিক প্রতিষ্ঠান এবং এর সাথে সম্পৃক্ত সম্মানিত আলেমগণ যেন অত্যন্ত কম খরচে ও সহজ পদ্ধতিতে ডিজিটাল মাধ্যমে আসতে পারেন এবং নিজেদের প্রচারের মাধ্যমে সমাজে বিশুদ্ধ ইসলামের প্রচার বহুগুণ বৃদ্ধি করতে পারেন।
+                            </p>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                            আপনার বয়ান এডিটিং থেকে শুরু করে চ্যানেল র‍্যাংকিং কিংবা মাদ্রাসার হিসাব সফটওয়্যার ও ড্রোন শুট—সবকিছুতেই আমরা বজায় রাখি শতভাগ শরীয়াহ নীতিমালা ও আমানতদারিতা। ইনশাআল্লাহ, প্রযুক্তির এই ময়দানে আমরা হব আপনার সবচেয়ে বিশ্বস্ত সহযোগী।
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FAQ (সাধারণ জিজ্ঞাসা) -->
+    <section id="faq" class="py-16 md:py-24 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-emerald-800 font-bold text-sm uppercase tracking-wider bg-emerald-100 px-3.5 py-1 rounded-full">সন্দেহ নিরসন ও প্রশ্নোত্তর</span>
+                <h2 class="text-2xl sm:text-4xl font-bold text-slate-900 mt-3">
+                    সম্মানিত আলেম ও মুহতামিমদের সাধারণ জিজ্ঞাসা (FAQ)
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
+                    <button onclick="toggleFaq(1)" class="w-full px-6 py-4 text-left flex justify-between items-center font-bold text-slate-900 hover:text-emerald-800 focus:outline-none">
+                        <span>১. আমার ভিডিওতে কি কোনো মিউজিক বা শরীয়ত পরিপন্থী কিছু ব্যবহার করা হবে?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down text-emerald-800 transition-transform"></i>
+                    </button>
+                    <div id="faq-body-1" class="px-6 pb-5 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        সম্পূর্ণ না। আমরা ১০০% হালাল ও শরীয়াহ নীতি মেনে কাজ করি। ভিডিও এডিটিংয়ে কোনো প্রকার বাদ্যযন্ত্র বা মিউজিক ব্যবহার করা হয় না; শুধুমাত্র প্রাকৃতিক ভয়েস একো, হালাল সাউন্ড ইফেক্ট এবং শরীয়াহ-সম্মত ক্যালিগ্রাফি ও থাম্বনেইল ব্যবহার করা হয়।
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
+                    <button onclick="toggleFaq(2)" class="w-full px-6 py-4 text-left flex justify-between items-center font-bold text-slate-900 hover:text-emerald-800 focus:outline-none">
+                        <span>২. কেন ১ বছরের টার্গেট নিয়ে ৩, ৬ বা ১২ মাসের প্যাকেজ করা হয়েছে?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down text-emerald-800 transition-transform"></i>
+                    </button>
+                    <div id="faq-body-2" class="hidden px-6 pb-5 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        ইউটিউব, ফেসবুক ও গুগল অ্যালগরিদমে একটি নতুন চ্যানেলকে সার্চের একদম উপরে (Search Top) আনতে নিয়মিত ভিডিও আপলোড এবং SEO, AEO ও GEO করার জন্য কমপক্ষে ১ বছর সময় লাগে। আপনি চাইলে ৩ মাস বা ৬ মাসের প্যাকেজ দিয়ে শুরু করে ফলাফল দেখে ধাপে ধাপে ১ বছরের লক্ষ্য পূর্ণ করতে পারবেন।
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
+                    <button onclick="toggleFaq(3)" class="w-full px-6 py-4 text-left flex justify-between items-center font-bold text-slate-900 hover:text-emerald-800 focus:outline-none">
+                        <span>৩. আমি মাহফিলের ভিডিও আপনাদের কাছে কীভাবে পাঠাব?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down text-emerald-800 transition-transform"></i>
+                    </button>
+                    <div id="faq-body-3" class="hidden px-6 pb-5 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        আপনার মোবাইল বা ক্যামেরায় রেকর্ড করা ভিডিও খুব সহজেই Google Drive, Telegram অথবা WhatsApp ডকুমেন্টের মাধ্যমে আমাদের পাঠিয়ে দেবেন। কিভাবে পাঠাবেন তা আমরা আপনাকে একদম হাতে-কলমে দেখিয়ে দেব। বাকি এডিটিং, থাম্বনেইল ও আপলোডের সব কাজ আমাদের টিম করবে।
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
+                    <button onclick="toggleFaq(4)" class="w-full px-6 py-4 text-left flex justify-between items-center font-bold text-slate-900 hover:text-emerald-800 focus:outline-none">
+                        <span>৪. আমাদের মাদ্রাসা টাঙ্গাইল বা ঢাকার বাইরে হলে কি ড্রোন ও ফটোশুট করা সম্ভব?</span>
+                        <i id="faq-icon-4" class="fa-solid fa-chevron-down text-emerald-800 transition-transform"></i>
+                    </button>
+                    <div id="faq-body-4" class="hidden px-6 pb-5 text-slate-600 text-sm sm:text-base leading-relaxed">
+                        জি, অবশ্যই! আমাদের প্রোডাকশন টিম বাংলাদেশের যেকোনো জেলার মাদ্রাসায় সরাসরি গিয়ে ড্রোন ভিডিওগ্রাফি, ফটোশুট ও প্রমোশনাল ভিডিও ধারণ করার জন্য প্রস্তুত।
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FINAL CTA & FOOTER -->
+    <footer class="islamic-pattern text-white pt-16 pb-12 border-t border-emerald-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- High-Converting Footer CTA Banner -->
+            <div class="bg-gradient-to-r from-emerald-900 to-emerald-950 border-2 border-gold-400/50 rounded-3xl p-8 sm:p-12 text-center shadow-2xl mb-14">
+                <h2 class="text-2xl sm:text-4xl font-bold mb-4">
+                    আপনার দ্বীনি কার্যক্রমকে ডিজিটাল বিপ্লবে যুক্ত করতে প্রস্তুত তো?
+                </h2>
+                <p class="text-emerald-200 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+                    আজই আমাদের সাথে কথা বলুন। আপনার চ্যানেল বা মাদ্রাসার জন্য কোন পরিকল্পনাটি সবচেয়ে সাশ্রয়ী ও কার্যকর হবে—সেই পরামর্শ সম্পূর্ণ ফ্রি!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%20%E0%A6%AE%E0%A6%A8%E0%A6%BF%E0%A6%B0%E0%A7%81%E0%A6%9C%E0%A7%8D%E0%A6%9C%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%A8%20%E0%A6%AD%E0%A6%BE%E0%A6%87%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20digitalad.bd-%E0%A6%8F%E0%A6%B0%20%E0%A6%B8%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AD%E0%A6%BF%E0%A6%B8%20%E0%A6%A8%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A7%87%20%E0%A6%AA%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%B0%E0%A7%8D%E0%A6%B6%20%E0%A6%95%E0%A6%B0%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" class="w-full sm:w-auto gold-gradient-bg text-emerald-950 font-bold text-lg px-8 py-4 rounded-xl shadow-lg hover:brightness-110 transition flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>হোয়াটসঅ্যাপে মেসেজ দিন: 01834-399859</span>
+                    </a>
+                    <a href="tel:+8801834399859" class="w-full sm:w-auto bg-emerald-800 hover:bg-emerald-700 text-white font-semibold text-lg px-8 py-4 rounded-xl border border-emerald-600 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-phone-volume text-gold-400"></i>
+                        <span>সরাসরি কল করুন</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Info Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-emerald-800/80">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="font-english text-2xl font-extrabold gold-gradient-text">digitalad.bd</span>
+                    </div>
+                    <p class="text-emerald-200 text-sm leading-relaxed">
+                        বাংলাদেশের ইসলামিক স্কলারদের পার্সোনাল ব্র্যান্ডিং, মাদ্রাসা হিসাব সফটওয়্যার, ড্রোন প্রমোশন ও ওয়েবসাইট ডেভেলপমেন্টের বিশ্বস্ত ডিজিটাল এজেন্সি।
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-gold-400 text-base mb-4">আমাদের সেবাসমূহ</h4>
+                    <ul class="space-y-2 text-sm text-emerald-200">
+                        <li><a href="#packages" class="hover:text-gold-400">১. স্কলারস পার্সোনাল ব্র্যান্ডিং (SEO, AEO, GEO)</a></li>
+                        <li><a href="#erp-demo" class="hover:text-gold-400">২. মাদ্রাসা আয়-ব্যয় হিসাব সফটওয়্যার</a></li>
+                        <li><a href="#services" class="hover:text-gold-400">৩. মাদ্রাসা ফটোশুট, ড্রোন ভিডিও ও ফেসবুক অ্যাড</a></li>
+                        <li><a href="#services" class="hover:text-gold-400">৪. মাদ্রাসা কাস্টম ওয়েবসাইট তৈরি</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-gold-400 text-base mb-4">যোগাযোগের ঠিকানা</h4>
+                    <ul class="space-y-3 text-sm text-emerald-100">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-gold-400 text-lg w-5"></i>
+                            <span>হোয়াটসঅ্যাপ ও কল: <strong class="font-english">01834399859</strong></span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-gold-400 text-lg w-5"></i>
+                            <span class="font-english">digitaladbymonir@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-gold-400 text-lg w-5"></i>
+                            <span>ঘাটাইল, টাঙ্গাইল, বাংলাদেশ।</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-emerald-300">
+                <p>© ২০২৬ <strong class="font-english text-gold-400">digitalad.bd</strong> — সর্বস্বত্ব সংরক্ষিত। প্রতিষ্ঠাতা: মনিরুজ্জামান।</p>
+                <div class="flex gap-4">
+                    <button onclick="openPolicyModal()" class="hover:text-gold-400 underline">শরীয়াহ নীতিমালা ও প্রাইভেসি পলিসি</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Quick WhatsApp Action Button -->
+    <a href="https://wa.me/8801834399859?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20digitalad.bd%20%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%AC%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%9F%20%E0%A6%A5%E0%A7%87%E0%A6%95%E0%A7%87%20%E0%A6%AE%E0%A7%87%E0%A6%B8%E0%A7%87%E0%A6%9C%20%E0%A6%A6%E0%A6%BF%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A6%BF%E0%A5%A4" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-5 right-5 z-50 bg-[#25D366] hover:bg-[#1ebe5d] text-white px-4 py-3 rounded-full shadow-2xl flex items-center gap-2 font-bold text-sm transition transform hover:scale-105">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="hidden sm:inline">সরাসরি চ্যাট করুন</span>
+    </a>
+
+    <!-- Shariah & Privacy Policy Modal -->
+    <div id="policy-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl space-y-4">
+            <div class="flex justify-between items-center border-b pb-3">
+                <h3 class="text-lg font-bold text-emerald-950">শরীয়াহ নীতিমালা ও প্রাইভেসি পলিসি</h3>
+                <button onclick="closePolicyModal()" class="text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
+            </div>
+            <div class="text-sm text-slate-600 space-y-3 leading-relaxed">
+                <p><strong>১. ১০০% শরীয়াহ কমপ্লায়েন্স:</strong> digitalad.bd কোনো ধরনের মিউজিক, হারাম পণ্যের বিজ্ঞাপন বা শরীয়াহ-বিরোধী ভিজ্যুয়াল কন্টেন্ট নিয়ে কাজ করে না।</p>
+                <p><strong>২. তথ্যের গোপনীয়তা (Data Privacy):</strong> সম্মানিত আলেমদের চ্যানেল অ্যাক্সেস এবং মাদ্রাসার আর্থিক হিসাব-নিকাশের সকল ডেটা শতভাগ আমানতদারিতা ও গোপনীয়তার সাথে সংরক্ষিত থাকে।</p>
+                <p><strong>৩. মালিকানা:</strong> আমাদের তৈরি করা পেজ, ইউটিউব চ্যানেল এবং ওয়েবসাইটের শতভাগ অ্যাডমিন মালিকানা ক্লায়েন্টের নিজের নামে থাকে।</p>
+            </div>
+            <div class="pt-3 text-right">
+                <button onclick="closePolicyModal()" class="bg-emerald-900 text-white px-5 py-2 rounded-xl text-sm font-semibold">বুঝেছি, বন্ধ করুন</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Interactive Madrasa ERP Demo Tabs
+        function switchErpTab(tabName) {
+            const tabs = ['summary', 'lillah', 'students'];
+            tabs.forEach(t => {
+                document.getElementById('erp-content-' + t).classList.add('hidden');
+                const btn = document.getElementById('tab-btn-' + t);
+                btn.className = 'erp-tab-btn bg-emerald-900 text-emerald-100 hover:bg-emerald-800 font-semibold px-4 py-2 rounded-lg text-xs sm:text-sm border border-emerald-700 transition';
+            });
+
+            document.getElementById('erp-content-' + tabName).classList.remove('hidden');
+            document.getElementById('tab-btn-' + tabName).className = 'erp-tab-btn gold-gradient-bg text-emerald-950 font-bold px-4 py-2 rounded-lg text-xs sm:text-sm transition shadow-md';
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(index) {
+            const body = document.getElementById('faq-body-' + index);
+            const icon = document.getElementById('faq-icon-' + index);
+            body.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Policy Modal
+        function openPolicyModal() {
+            document.getElementById('policy-modal').classList.remove('hidden');
+        }
+        function closePolicyModal() {
+            document.getElementById('policy-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
